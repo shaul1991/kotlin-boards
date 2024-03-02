@@ -8,6 +8,7 @@ plugins {
     kotlin("jvm") version "1.9.22"
     kotlin("plugin.spring") version "1.9.22"
     kotlin("plugin.jpa") version "1.9.22"
+    kotlin("kapt") version "1.9.22"
 }
 
 group = "com.example"
@@ -35,6 +36,9 @@ dependencies {
     testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.3")
     // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
+    // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
+    implementation("com.querydsl:querydsl-jpa:5.1.0:jakarta")
+    kapt("com.querydsl:querydsl-jpa:5.1.0:jakarta")
 }
 
 tasks.withType<KotlinCompile> {
